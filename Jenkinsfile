@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm ci' //This is for building the nodejs project
+                sh 'run ./main' //This is for building the nodejs project
             }
         }
         stage('Test') {
