@@ -5,6 +5,7 @@ pipeline {
     tools {
         nodejs 'nodejs'
         dockerTool 'Docker_installations'
+        maven 'Maven tool'
     }
     triggers {
         githubPush()
