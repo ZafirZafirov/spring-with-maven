@@ -26,12 +26,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'run ./main' //This is for building the nodejs project
+                sh 'mvn clean install' //This is for building the nodejs project
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test' //This is for testing the nodejs modules
+                sh 'mvn test' //This is for testing the nodejs modules
             }
         }
        stage('Docker login'){
