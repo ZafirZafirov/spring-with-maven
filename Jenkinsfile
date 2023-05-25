@@ -53,7 +53,7 @@ pipeline {
         }
         stage('Deploy') {
            steps {
-                sh 'docker run ${IMAGE_NAME}:${BUILD_NUMBER}'
+                sh 'docker run -d -p 7000:8080 ${IMAGE_NAME}:${BUILD_NUMBER}'
            }
         }
     }
